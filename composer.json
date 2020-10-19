@@ -1,0 +1,12 @@
+{
+    "name": "jjpz/seagrove",
+    "authors": [
+        {
+            "name": "Juanjo Perez",
+            "email": "jjperez85@gmail.com"
+        }
+    ],
+    "require": {
+        "sentry/sdk": "^3.0"
+    }
+}
