@@ -3,7 +3,9 @@
 <div id="primary" class="content-area">
 <main id="main" class="site-main">
 
-<h1>Marketing Assets</h1>
+<header class="marketing-header">
+	<div class="container text-center"><h2 class="h2-new">Marketing Assets</h2></div>
+</header>
 
 <?php
 if (have_posts()) {
@@ -17,6 +19,9 @@ if (have_posts()) {
         $unit = get_post_meta($ID, 'unit', true);
         $city = get_post_meta($ID, 'locality', true);
         $state = get_post_meta($ID, 'administrative_area_level_1', true);
+        $availability = get_field('property_availability', $ID);
+        $status = get_field('property_status', $ID);
+        $type = get_field('property_type', $ID);
         $src = get_the_post_thumbnail_url($ID, 'full');
         $link = get_the_permalink($ID);
         $email_blast = get_field('property_marketing_email_blast', $ID);
@@ -32,7 +37,9 @@ if (have_posts()) {
             $agents = get_posts(array(
                 'post_type' => 'agent',
                 'post_status' => 'publish',
-                'numberposts' => -1
+                'numberposts' => -1,
+                'order' => 'ASC',
+                'orderby' => 'title'
             ));
             if (!empty($agents)) {
                 foreach ($agents as $agent) {
@@ -46,8 +53,30 @@ if (have_posts()) {
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-lg-6 property-col">
-                    <div class="property-image">
+                    <div class="property-marketing-image">
                         <img src="<?php echo $src; ?>" alt="">
+                        <?php
+                        if ( $availability == 'Yes' ) {
+                            $avail = 'avail';
+                            if ( $status == 'Sale' ) {
+                                $stat = 'sale';
+                                $text = 'For Sale';
+                            } else {
+                                $stat = 'rent';
+                                $text = 'For Rent';
+                            }
+                        } else {
+                            $avail = 'no-avail';
+                            if ( $status == 'Sale' ) {
+                                $stat = 'sale';
+                                $text = 'Sold';
+                            } else {
+                                $stat = 'rent';
+                                $text = 'Leased';
+                            }
+                        }
+                        ?>
+					    <div class="flag <?php echo $avail . ' ' . $stat; ?>"><?php echo $text; ?></div>
                     </div>
                 </div>
                 <div class="col-lg-6 property-col">
@@ -60,7 +89,7 @@ if (have_posts()) {
                             <h2 class="h2"><?php echo $city; ?>, <?php echo $state; ?></h2>
                         </div>
                         <div class="property-link">
-                                <a href="<?php echo $link; ?>">Property Page</a>
+                                <a href="<?php echo $link; ?>" target="_blank">Property Page</a>
                         </div>
                         <div class="property-marketing">
                             <div class="property-marketing-digital">
@@ -128,7 +157,7 @@ if (have_posts()) {
                 <div class="row no-gutters">
 
                     <div class="col-12">
-                        <h2 class="h2">Your Sea Grove Agent</h2>
+                        <h2 class="h2">Property Specialists</h2>
                     </div>
 
                     <?php
