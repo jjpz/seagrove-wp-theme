@@ -43,7 +43,11 @@ if (have_posts()) {
             ));
             if (!empty($agents)) {
                 foreach ($agents as $agent) {
-                    echo '<li><a href="'.$propertyLink.'?_agent='.$agent->post_name.'" target="_blank">'.$agent->post_title.'</a></li>';
+                    echo '<li class="col-sm-6 property-marketing-item"><a href="'.$propertyLink.'?_agent='.$agent->post_name.'" target="_blank"><span>'.$agent->post_title.'</span><span class="icon-link">
+                    <svg width="15" height="15" viewBox="0 0 512 512">
+                        <path style="fill:#519DBB;" d="M326.612,185.391c59.747,59.809,58.927,155.698,0.36,214.59c-0.11,0.12-0.24,0.25-0.36,0.37l-67.2,67.2c-59.27,59.27-155.699,59.262-214.96,0c-59.27-59.26-59.27-155.7,0-214.96l37.106-37.106c9.84-9.84,26.786-3.3,27.294,10.606c0.648,17.722,3.826,35.527,9.69,52.721c1.986,5.822,0.567,12.262-3.783,16.612l-13.087,13.087c-28.026,28.026-28.905,73.66-1.155,101.96c28.024,28.579,74.086,28.749,102.325,0.51l67.2-67.19c28.191-28.191,28.073-73.757,0-101.83c-3.701-3.694-7.429-6.564-10.341-8.569c-4.177-2.868-6.753-7.542-6.947-12.606c-0.396-10.567,3.348-21.456,11.698-29.806l21.054-21.055c5.521-5.521,14.182-6.199,20.584-1.731C313.422,173.314,320.289,179.068,326.612,185.391L326.612,185.391z M467.547,44.449c-59.261-59.262-155.69-59.27-214.96,0l-67.2,67.2c-0.12,0.12-0.25,0.25-0.36,0.37c-58.566,58.892-59.387,154.781,0.36,214.59c6.323,6.323,13.19,12.077,20.521,17.196c6.402,4.468,15.064,3.789,20.584-1.731l21.054-21.055c8.35-8.35,12.094-19.239,11.698-29.806c-0.194-5.064-2.77-9.738-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569c-28.073-28.073-28.191-73.639,0-101.83l67.2-67.19c28.239-28.239,74.3-28.069,102.325,0.51c27.75,28.3,26.872,73.934-1.155,101.96l-13.087,13.087c-4.35,4.35-5.769,10.79-3.783,16.612c5.864,17.194,9.042,34.999,9.69,52.721c0.509,13.906,17.454,20.446,27.294,10.606l37.106-37.106C526.817,200.149,526.817,103.709,467.547,44.449L467.547,44.449z"/>
+                    </svg>
+                </span></a></li>';
                 }
             }
         }
@@ -89,58 +93,113 @@ if (have_posts()) {
                             <h2 class="h2"><?php echo $city; ?>, <?php echo $state; ?></h2>
                         </div>
                         <div class="property-link">
-                                <a href="<?php echo $link; ?>" target="_blank">Property Page</a>
+                                <a class="btn-cta" href="<?php echo $link; ?>" target="_blank">Property Page</a>
+                                <div class="property-link-announcement">
+                                    <span class="icon-caret-left">
+                                        <svg viewBox="0 0 192 512"><path fill="currentColor" d="M192 127.338v257.324c0 17.818-21.543 26.741-34.142 14.142L29.196 270.142c-7.81-7.81-7.81-20.474 0-28.284l128.662-128.662c12.599-12.6 34.142-3.676 34.142 14.142z"></path></svg>
+                                    </span>
+                                    <span class="property-link-text">Share this page with your networks!</span>
+                                </div>
                         </div>
                         <div class="property-marketing">
-                            <div class="property-marketing-digital">
-                                <p>Digital</p>
+                            <div class="property-marketing-assets">
+                                <p class="property-marketing-assets-title">Digital</p>
                                 <ul>
                                     <?php if (!empty($email_blast)) { ?>
-                                    <li class="property-marketing-digital-item email-blast">
-                                        <a href="<?php echo $email_blast; ?>" target="_blank">Email Blast</a>
+                                    <li class="property-marketing-item email-blast">
+                                        <a href="<?php echo $email_blast; ?>" target="_blank">
+                                            <span>Email Blast</span>
+                                            <span class="icon-link icon-link-external">
+                                                <svg width="15" height="15" viewBox="0 0 512 512">
+                                                    <path style="fill:#519DBB;" d="M432,320h-32c-8.837,0-16,7.163-16,16v112H64V128h144c8.837,0,16-7.163,16-16V80c0-8.837-7.163-16-16-16H48C21.49,64,0,85.49,0,112v352c0,26.51,21.49,48,48,48l0,0h352c26.51,0,48-21.49,48-48l0,0V336C448,327.163,440.837,320,432,320z M488,0H360c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37c-9.389,9.356-9.415,24.552-0.059,33.941c0.02,0.02,0.039,0.039,0.059,0.059L157.67,377c9.356,9.389,24.552,9.415,33.941,0.059c0.02-0.02,0.039-0.039,0.059-0.059l243.61-243.68L471,169c15,15,41,4.5,41-17V24C512,10.745,501.255,0,488,0z"/>
+                                                </svg>
+                                            </span>
+                                        </a>
                                     </li>
                                     <?php } ?>
                                     <?php if (!empty($marketing_facebook)) { ?>
-                                    <li class="property-marketing-digital-item marketing-facebook">
-                                        <a href="<?php echo $marketing_facebook; ?>" target="_blank">Facebook</a>
+                                    <li class="property-marketing-item marketing-facebook">
+                                        <a href="<?php echo $marketing_facebook; ?>" target="_blank">
+                                            <span>Facebook</span>
+                                            <span class="icon-link icon-link-external">
+                                                <svg width="15" height="15" viewBox="0 0 512 512">
+                                                    <path style="fill:#519DBB;" d="M432,320h-32c-8.837,0-16,7.163-16,16v112H64V128h144c8.837,0,16-7.163,16-16V80c0-8.837-7.163-16-16-16H48C21.49,64,0,85.49,0,112v352c0,26.51,21.49,48,48,48l0,0h352c26.51,0,48-21.49,48-48l0,0V336C448,327.163,440.837,320,432,320z M488,0H360c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37c-9.389,9.356-9.415,24.552-0.059,33.941c0.02,0.02,0.039,0.039,0.059,0.059L157.67,377c9.356,9.389,24.552,9.415,33.941,0.059c0.02-0.02,0.039-0.039,0.059-0.059l243.61-243.68L471,169c15,15,41,4.5,41-17V24C512,10.745,501.255,0,488,0z"/>
+                                                </svg>
+                                            </span>
+                                        </a>
                                     </li>
                                     <?php } ?>
                                     <?php if (!empty($marketing_instagram)) { ?>
-                                    <li class="property-marketing-digital-item marketing-instagram">
-                                        <a href="<?php echo $marketing_instagram; ?>" target="_blank">Instagram</a>
+                                    <li class="property-marketing-item marketing-instagram">
+                                        <a href="<?php echo $marketing_instagram; ?>" target="_blank">
+                                        <span>Instagram</span>
+                                        <span class="icon-link icon-link-external">
+                                                <svg width="15" height="15" viewBox="0 0 512 512">
+                                                    <path style="fill:#519DBB;" d="M432,320h-32c-8.837,0-16,7.163-16,16v112H64V128h144c8.837,0,16-7.163,16-16V80c0-8.837-7.163-16-16-16H48C21.49,64,0,85.49,0,112v352c0,26.51,21.49,48,48,48l0,0h352c26.51,0,48-21.49,48-48l0,0V336C448,327.163,440.837,320,432,320z M488,0H360c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37c-9.389,9.356-9.415,24.552-0.059,33.941c0.02,0.02,0.039,0.039,0.059,0.059L157.67,377c9.356,9.389,24.552,9.415,33.941,0.059c0.02-0.02,0.039-0.039,0.059-0.059l243.61-243.68L471,169c15,15,41,4.5,41-17V24C512,10.745,501.255,0,488,0z"/>
+                                                </svg>
+                                            </span>
+                                        </a>
                                     </li>
                                     <?php } ?>
                                     <?php if (!empty($branded_social_images)) { ?>
-                                    <li class="property-marketing-digital-item branded-social-images">
-                                        <a href="<?php echo $branded_social_images; ?>" target="_blank">Branded Social Images</a>
+                                    <li class="property-marketing-item branded-social-images">
+                                        <a href="<?php echo $branded_social_images; ?>" target="_blank">
+                                            <span>Branded Social Images</span>
+                                            <span class="icon-link icon-link-external">
+                                                <svg width="15" height="15" viewBox="0 0 512 512">
+                                                    <path style="fill:#519DBB;" d="M432,320h-32c-8.837,0-16,7.163-16,16v112H64V128h144c8.837,0,16-7.163,16-16V80c0-8.837-7.163-16-16-16H48C21.49,64,0,85.49,0,112v352c0,26.51,21.49,48,48,48l0,0h352c26.51,0,48-21.49,48-48l0,0V336C448,327.163,440.837,320,432,320z M488,0H360c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37c-9.389,9.356-9.415,24.552-0.059,33.941c0.02,0.02,0.039,0.039,0.059,0.059L157.67,377c9.356,9.389,24.552,9.415,33.941,0.059c0.02-0.02,0.039-0.039,0.059-0.059l243.61-243.68L471,169c15,15,41,4.5,41-17V24C512,10.745,501.255,0,488,0z"/>
+                                                </svg>
+                                            </span>
+                                        </a>
                                     </li>
                                     <?php } ?>
                                 </ul>
                             </div>
-                            <div class="property-marketing-print">
-                                <p>Print</p>
+                            <div class="property-marketing-assets">
+                                <p class="property-marketing-assets-title">Print</p>
                                 <ul>
                                     <?php if (!empty($booklet)) { ?>
-                                    <li class="property-marketing-print-item booklet">
-                                        <a href="<?php echo $booklet; ?>" target="_blank">Booklet</a>
+                                    <li class="property-marketing-item booklet">
+                                        <a href="<?php echo $booklet; ?>" target="_blank">
+                                            <span>Booklet</span>
+                                            <span class="icon-link icon-link-external">
+                                                <svg width="15" height="15" viewBox="0 0 512 512">
+                                                    <path style="fill:#519DBB;" d="M432,320h-32c-8.837,0-16,7.163-16,16v112H64V128h144c8.837,0,16-7.163,16-16V80c0-8.837-7.163-16-16-16H48C21.49,64,0,85.49,0,112v352c0,26.51,21.49,48,48,48l0,0h352c26.51,0,48-21.49,48-48l0,0V336C448,327.163,440.837,320,432,320z M488,0H360c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37c-9.389,9.356-9.415,24.552-0.059,33.941c0.02,0.02,0.039,0.039,0.059,0.059L157.67,377c9.356,9.389,24.552,9.415,33.941,0.059c0.02-0.02,0.039-0.039,0.059-0.059l243.61-243.68L471,169c15,15,41,4.5,41-17V24C512,10.745,501.255,0,488,0z"/>
+                                                </svg>
+                                            </span>
+                                        </a>
                                     </li>
                                     <?php } ?>
                                     <?php if (!empty($mailer_eddm)) { ?>
-                                    <li class="property-marketing-print-item mailer-eddm">
-                                        <a href="<?php echo $mailer_eddm; ?>" target="_blank">Mailer (EDDM)</a>
+                                    <li class="property-marketing-item mailer-eddm">
+                                        <a href="<?php echo $mailer_eddm; ?>" target="_blank">
+                                            <span>Mailer (EDDM)</span>
+                                            <span class="icon-link icon-link-external">
+                                                <svg width="15" height="15" viewBox="0 0 512 512">
+                                                    <path style="fill:#519DBB;" d="M432,320h-32c-8.837,0-16,7.163-16,16v112H64V128h144c8.837,0,16-7.163,16-16V80c0-8.837-7.163-16-16-16H48C21.49,64,0,85.49,0,112v352c0,26.51,21.49,48,48,48l0,0h352c26.51,0,48-21.49,48-48l0,0V336C448,327.163,440.837,320,432,320z M488,0H360c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37c-9.389,9.356-9.415,24.552-0.059,33.941c0.02,0.02,0.039,0.039,0.059,0.059L157.67,377c9.356,9.389,24.552,9.415,33.941,0.059c0.02-0.02,0.039-0.039,0.059-0.059l243.61-243.68L471,169c15,15,41,4.5,41-17V24C512,10.745,501.255,0,488,0z"/>
+                                                </svg>
+                                            </span>
+                                        </a>
                                     </li>
                                     <?php } ?>
                                     <?php if (!empty($mailer_direct_mail)) { ?>
-                                    <li class="property-marketing-print-item mailer-direct-mail">
-                                        <a href="<?php echo $mailer_direct_mail; ?>" target="_blank">Mailer (DIrect Mail)</a>
+                                    <li class="property-marketing-item mailer-direct-mail">
+                                        <a href="<?php echo $mailer_direct_mail; ?>" target="_blank">
+                                            <span>Mailer (DIrect Mail)</span>
+                                            <span class="icon-link icon-link-external
+                                                <svg width="15" height="15" viewBox="0 0 512 512">
+                                                    <path style="fill:#519DBB;" d="M432,320h-32c-8.837,0-16,7.163-16,16v112H64V128h144c8.837,0,16-7.163,16-16V80c0-8.837-7.163-16-16-16H48C21.49,64,0,85.49,0,112v352c0,26.51,21.49,48,48,48l0,0h352c26.51,0,48-21.49,48-48l0,0V336C448,327.163,440.837,320,432,320z M488,0H360c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37c-9.389,9.356-9.415,24.552-0.059,33.941c0.02,0.02,0.039,0.039,0.059,0.059L157.67,377c9.356,9.389,24.552,9.415,33.941,0.059c0.02-0.02,0.039-0.039,0.059-0.059l243.61-243.68L471,169c15,15,41,4.5,41-17V24C512,10.745,501.255,0,488,0z"/>
+                                                </svg>
+                                            </span>
+                                        </a>
                                     </li>
                                     <?php } ?>
                                 </ul>
                             </div>
                         </div>
                         <div class="property-agent-links">
-                            <p>Agent Pages</p>
-                            <ul>
+                            <p class="property-marketing-assets-title">Agent Pages</p>
+                            <ul class="row">
                                 <?php agentCloneLinks($link); ?>
                             </ul>
                         </div>

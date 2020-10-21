@@ -344,6 +344,12 @@ button:focus {
 	height: 13px;
 }
 
+.icon-caret-left {
+	display: inline-flex;
+	width: 5px;
+	height: 13px;
+}
+
 .icon-caret-right {
 	display: inline-flex;
 	width: 5px;
@@ -1822,7 +1828,6 @@ body.single-agent-sell .sell-buttons {
 }
 
 body.single-property-marketing .property-address {
-	margin-bottom: 30px;
 	border: none;
 }
 
@@ -2522,7 +2527,97 @@ a.map-dir-btn {
 /* Marketing Assets Page */
 
 .property-marketing-image {
+	display: block;
 	position: relative;
+	width: 100%;
+	padding-top: 67%;
+	overflow: hidden;
+}
+
+.property-marketing-image img {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 0.25s;
+}
+
+.property-link {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 45px;
+	margin-bottom: 45px;
+}
+
+.property-link a {
+	margin-right: 30px;
+	background-color: #4e9dbb;
+	color: #fff;
+}
+
+.property-link-announcement {
+	display: inline-flex;
+	flex: 1 0;
+	align-items: center;
+}
+
+.property-link-announcement svg {
+	width: 5px;
+	height: 13px;
+}
+
+.property-link-text {
+	margin-left: 5px;
+	font-family: 'Gotham-BookItalic';
+}
+
+.property-marketing-assets {
+	margin-bottom: 45px;
+}
+
+.property-marketing-assets-title {
+	margin-bottom: 10px;
+	font-family: 'Gotham-BookItalic';
+	font-size: 14px;
+	color: #4e9dbb;
+	text-transform: uppercase;
+}
+
+li.property-marketing-item {
+	margin-bottom: 5px;
+}
+
+li.property-marketing-item a {
+	font-family: 'Gotham-Bold';
+	font-size: 21px;
+	color: #002c3f;
+}
+
+li.property-marketing-item a span {
+	display: inline-flex;
+}
+
+li.property-marketing-item a .icon-link {
+	margin-left: 10px;
+}
+
+li.property-marketing-item a .icon-link-external {
+	margin-left: 5px;
+}
+
+li.property-marketing-item a svg {
+	width: 15px;
+	height: 15px;
+}
+
+@media (max-width: 575px) {
+	.property-link a {
+		margin-right: 15px;
+	}
 }
 
 /* panel with separator */
