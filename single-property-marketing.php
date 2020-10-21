@@ -22,7 +22,8 @@ if (have_posts()) {
         $availability = get_field('property_availability', $ID);
         $status = get_field('property_status', $ID);
         $type = get_field('property_type', $ID);
-        $src = get_the_post_thumbnail_url($ID, 'full');
+        $src = get_the_post_thumbnail_url($ID, 'large');
+        $srcset = wp_get_attachment_image_srcset(get_post_thumbnail_id($ID), 'large');
         $link = get_the_permalink($ID);
         $email_blast = get_field('property_marketing_email_blast', $ID);
         $marketing_facebook = get_field('property_marketing_facebook', $ID);
@@ -58,7 +59,8 @@ if (have_posts()) {
             <div class="row no-gutters">
                 <div class="col-lg-6 property-col">
                     <div class="property-marketing-image">
-                        <img src="<?php echo $src; ?>" alt="">
+                    <img src="" srcset="" data-srcset="<?php echo $srcset; ?>" class="lazy" />
+                    <div class="lazy-overlay on"></div>
                         <?php
                         if ( $availability == 'Yes' ) {
                             $avail = 'avail';
