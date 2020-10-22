@@ -37,7 +37,7 @@ $class = 'single-agent-clone single-agent-sell';
 if( is_singular('property') && get_query_var('_agent') ) {
 $class = 'single-agent-clone';
 }
-if ( is_singular('property') && get_query_var('marketing') ) {
+if ( is_singular('property') && get_query_var('marketing-assets') ) {
 	$class = 'single-property-marketing';
 }
 ?>

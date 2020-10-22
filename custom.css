@@ -2526,6 +2526,14 @@ a.map-dir-btn {
 
 /* Marketing Assets Page */
 
+.property-marketing-col {
+	margin-bottom: 60px;
+}
+
+.property-marketing-col:nth-child(1) {
+	padding-right: 60px;
+}
+
 .property-marketing-image {
 	display: block;
 	position: relative;
@@ -2597,6 +2605,10 @@ li.property-marketing-item a {
 	color: #002c3f;
 }
 
+li.property-marketing-item.property-marketing-agent a {
+	font-size: 14px;
+}
+
 li.property-marketing-item a span {
 	display: inline-flex;
 }
@@ -2605,13 +2617,19 @@ li.property-marketing-item a .icon-link {
 	margin-left: 10px;
 }
 
-li.property-marketing-item a .icon-link-external {
-	margin-left: 5px;
-}
-
 li.property-marketing-item a svg {
 	width: 15px;
 	height: 15px;
+}
+
+.property-agent-links {
+	margin-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+	.property-marketing-col:nth-child(1) {
+		padding-right: 0;
+	}
 }
 
 @media (max-width: 575px) {

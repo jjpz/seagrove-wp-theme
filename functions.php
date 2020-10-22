@@ -192,10 +192,11 @@ function seagrove_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'seagrove_scripts' );
 
+if (wp_get_environment_type() === 'local') {
 // Include the composer autoloader for the Sentry library
 include_once __DIR__ . '/vendor/autoload.php';
-
 // Register error handler to report to Sentry
 Sentry\init(['dsn' => 'https://3c469203698f4dd09465c2708d197bf9@o462777.ingest.sentry.io/5467428' ]);
-
+// Sample error
 //throw new Exception("My first Sentry error!");
+}
