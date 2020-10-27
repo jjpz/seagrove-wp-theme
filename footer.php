@@ -16,6 +16,7 @@ $email = carbon_get_theme_option('crb_theme_email');
 $facebook = carbon_get_theme_option('crb_theme_facebook_link');
 $instagram = carbon_get_theme_option('crb_theme_instagram_link');
 $youtube = carbon_get_theme_option('crb_theme_youtube_link');
+$accessToken = carbon_get_theme_option('crb_theme_igfeed_accesstoken_link');
 $sharefile_url = carbon_get_theme_option('crb_theme_sharefile_link_url');
 $sharefile_text = carbon_get_theme_option('crb_theme_sharefile_link_text');
 ?>
@@ -265,7 +266,7 @@ jQuery(document).ready(function($){
 <?php if ( is_front_page() ) { ?>
 <script>
 // instafeed
-var feed = new Instafeed({
+/*/var feed = new Instafeed({
 get: 'user',
 userId: '1418076643',
 clientId: '618a8653c0c34b8b88b9d2c7992dd974',
@@ -276,7 +277,17 @@ sortBy: 'most-recent',
 limit: 3,
 resolution: 'standard_resolution'
 });
+feed.run();*/
+
+<?php if (isset($accessToken) && !empty($accessToken)) { ?>
+var feed = new Instafeed({
+	accessToken: '<?php echo $accessToken; ?>',
+	target: 'ig-feed',
+	limit: 3,
+	template: '<div class="ig-item"><a href="{{link}}" class="ig-link" target="_blank"><div class="ig-image"><img src="{{image}}" title="{{caption}}" alt="{{caption}}" /></div></a></div>',
+});
 feed.run();
+<?php } ?>
 </script>
 <?php } ?>
 
