@@ -159,8 +159,8 @@ $count ++;
 global $post;
 $thumbnail = get_the_post_thumbnail($post->ID);
 $image = get_the_post_thumbnail_url($post->ID, 'full');
-$src = get_the_post_thumbnail_url($ID, 'large');
-$srcset = wp_get_attachment_image_srcset(get_post_thumbnail_id($ID), 'large');
+$src = get_the_post_thumbnail_url($post->ID, 'large');
+$srcset = wp_get_attachment_image_srcset(get_post_thumbnail_id($post->ID), 'large');
 $name = $post->post_title;
 $position = get_field('agent_position', $post->ID);
 $phone = get_field('agent_phone', $post->ID);
@@ -220,14 +220,11 @@ $community = carbon_get_post_meta($post->ID, 'crb_agent_community');
 			<div class="agent-contact-info agent-zillow">
 				<a href="<?php echo $zillow; ?>" target="_blank">
 					<span class="icon">
-						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="19px" viewBox="0 0 23 19" enable-background="new 0 0 23 19" xml:space="preserve">
-						<g>
-						<path fill-rule="evenodd" clip-rule="evenodd" fill="#002C3F" d="M12.536,0.333c-1.278,0.592-4.951,3.435-6.936,4.924c2.414-0.806,8.205-2.088,11.172-2.156C15.841,2.447,13.237,0.676,12.536,0.333"/>
-						<path fill-rule="evenodd" clip-rule="evenodd" fill="#002C3F" d="M0.974,18.667c0.82-0.36,8.564-2.938,15.686-3.365c0.148-0.597,0.931-2.611,1.076-3.156c-7.387,0.524-13.396,2.729-15.808,3.848L0.974,18.667z"/>
-						<path fill-rule="evenodd" clip-rule="evenodd" fill="#002C3F" d="M17.322,3.484c0,0-7.188,7.224-8.313,8.259c2.186-0.788,6.666-1.729,9.506-1.901c0.331-1.008,0.685-1.735,0.685-1.735L23,7.727C23,7.727,20.107,5.39,17.322,3.484"/>
-						<path fill-rule="evenodd" clip-rule="evenodd" fill="#002C3F" d="M2.207,15.214c2.266-2.325,10.411-9.845,10.411-9.845c-4.239,0.99-8.662,2.334-10.24,3.054L0,10.867c1.984-0.424,2.627-0.509,4.082-0.719L2.207,15.214z"/>
+					<svg viewBox="0 0 512 512">
+						<g transform="matrix(3.07941,0,0,3.07941,89.0657,159.995)">
+							<path style="fill:#002C3F;" d="M26.635,82.168c-0.499,0.267-0.905,0.201-1.306-0.201L14.166,68.665c-0.298-0.37-0.334-0.571,0.067-1.136c8.628-12.634,26.24-32.323,37.47-40.643c0.201-0.134,0.134-0.303-0.103-0.201C39.902,30.495,6.648,44.8-5.652,51.752v45.183H114.04V53.424C97.73,56.195,48.865,70.737,26.635,82.168z M75.3,0.882c0.602-0.134,0.869,0.067,1.234,0.468c2.072,2.304,8.695,10.392,10.495,12.598c0.334,0.401,0.103,0.838-0.165,1.07C73.495,25.446,58.619,40.219,50.33,50.781c-0.165,0.237-0.031,0.237,0.103,0.201c14.439-6.217,48.361-16.146,63.638-18.918v-19.35L54.279-34.583L-5.616,12.678v21.154C12.932,22.808,55.848,5.726,75.3,0.882z"/>
 						</g>
-						</svg>
+					</svg>
 					</span>
 					<span class="">Zillow Profile</span>
 				</a>

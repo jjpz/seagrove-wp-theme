@@ -25,13 +25,22 @@ if (have_posts()) {
         $src = get_the_post_thumbnail_url($ID, 'large');
         $srcset = wp_get_attachment_image_srcset(get_post_thumbnail_id($ID), 'large');
         $link = get_the_permalink($ID);
-        $email_blast = get_field('property_marketing_email_blast', $ID);
+        /*$email_blast = get_field('property_marketing_email_blast', $ID);
         $marketing_facebook = get_field('property_marketing_facebook', $ID);
         $marketing_instagram = get_field('property_marketing_instagram', $ID);
         $branded_social_images = get_field('property_marketing_branded_social_images', $ID);
         $booklet = get_field('property_marketing_booklet', $ID);
         $mailer_eddm = get_field('property_marketing_mailer_eddm', $ID);
-        $mailer_direct_mail = get_field('property_marketing_mailer_direct_mail', $ID);
+        $mailer_direct_mail = get_field('property_marketing_mailer_direct_mail', $ID);*/
+        $email_blast = carbon_get_post_meta($ID, 'crb_property_marketing_email_blast');
+        $marketing_facebook = carbon_get_post_meta($ID, 'crb_property_marketing_facebook');
+        $marketing_instagram = carbon_get_post_meta($ID, 'crb_property_marketing_instagram');
+        $branded_social_images = carbon_get_post_meta($ID, 'crb_property_marketing_branded_social_images');
+        $booklet = carbon_get_post_meta($ID, 'crb_property_marketing_booklet');
+        $mailer_eddm = carbon_get_post_meta($ID, 'crb_property_marketing_mailer_eddm');
+        $mailer_direct_mail = carbon_get_post_meta($ID, 'crb_property_marketing_mailer_direct_mail');
+        $marketing_assets_digital = carbon_get_post_meta($ID, 'crb_property_marketing_assets_digital');
+        $marketing_assets_print = carbon_get_post_meta($ID, 'crb_property_marketing_assets_print');
         $agents = get_field('property_agents', $ID);
 
         function agentCloneLinks($propertyLink) {
@@ -151,6 +160,21 @@ if (have_posts()) {
                                         </a>
                                     </li>
                                     <?php } ?>
+                                    <?php if (!empty($marketing_assets_digital)) { ?>
+                                        <?php foreach ($marketing_assets_digital as $asset) { ?>
+                                            <?php if (!empty($asset['crb_property_marketing_asset_digital_text']) && !empty($asset['crb_property_marketing_asset_digital_url'])) { ?>
+                                            <li class="property-marketing-item">
+                                                <a href="<?php echo $asset['crb_property_marketing_asset_digital_url']; ?>" target="_blank">
+                                                    <span><?php echo $asset['crb_property_marketing_asset_digital_text']; ?></span><span class="icon-link icon-link-external">
+                                                        <svg width="15" height="15" viewBox="0 0 512 512">
+                                                            <path style="fill:#519DBB;" d="M432,320h-32c-8.837,0-16,7.163-16,16v112H64V128h144c8.837,0,16-7.163,16-16V80c0-8.837-7.163-16-16-16H48C21.49,64,0,85.49,0,112v352c0,26.51,21.49,48,48,48l0,0h352c26.51,0,48-21.49,48-48l0,0V336C448,327.163,440.837,320,432,320z M488,0H360c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37c-9.389,9.356-9.415,24.552-0.059,33.941c0.02,0.02,0.039,0.039,0.059,0.059L157.67,377c9.356,9.389,24.552,9.415,33.941,0.059c0.02-0.02,0.039-0.039,0.059-0.059l243.61-243.68L471,169c15,15,41,4.5,41-17V24C512,10.745,501.255,0,488,0z"/>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <?php } ?>
+                                        <?php } ?>
+                                    <?php } ?>
                                 </ul>
                             </div>
                             <?php } ?>
@@ -190,6 +214,21 @@ if (have_posts()) {
                                             </span>
                                         </a>
                                     </li>
+                                    <?php } ?>
+                                    <?php if (!empty($marketing_assets_print)) { ?>
+                                        <?php foreach ($marketing_assets_print as $asset) { ?>
+                                            <?php if (!empty($asset['crb_property_marketing_asset_print_text']) && !empty($asset['crb_property_marketing_asset_print_url'])) { ?>
+                                            <li class="property-marketing-item">
+                                                <a href="<?php echo $asset['crb_property_marketing_asset_print_url']; ?>" target="_blank">
+                                                    <span><?php echo $asset['crb_property_marketing_asset_print_text']; ?></span><span class="icon-link icon-link-external">
+                                                        <svg width="15" height="15" viewBox="0 0 512 512">
+                                                            <path style="fill:#519DBB;" d="M432,320h-32c-8.837,0-16,7.163-16,16v112H64V128h144c8.837,0,16-7.163,16-16V80c0-8.837-7.163-16-16-16H48C21.49,64,0,85.49,0,112v352c0,26.51,21.49,48,48,48l0,0h352c26.51,0,48-21.49,48-48l0,0V336C448,327.163,440.837,320,432,320z M488,0H360c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37c-9.389,9.356-9.415,24.552-0.059,33.941c0.02,0.02,0.039,0.039,0.059,0.059L157.67,377c9.356,9.389,24.552,9.415,33.941,0.059c0.02-0.02,0.039-0.039,0.059-0.059l243.61-243.68L471,169c15,15,41,4.5,41-17V24C512,10.745,501.255,0,488,0z"/>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <?php } ?>
+                                        <?php } ?>
                                     <?php } ?>
                                 </ul>
                             </div>

@@ -404,8 +404,8 @@ fjs.parentNode.insertBefore(js, fjs);
 		<div id="yt-player" class="modal-content">
 			<iframe width="800" height="450" src="" data-vsrc="<?php echo $video_url; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
+		<div class="close-filters"><a href="#" class="close-button" data-toggle="class" data-target="#youtube-modal" data-classes="open"></a></div>
 	</div>
-	<div class="close-filters"><a href="#" class="close-button" data-toggle="class" data-target="#youtube-modal" data-classes="open"></a></div>
 </div>
 <?php } ?>
 

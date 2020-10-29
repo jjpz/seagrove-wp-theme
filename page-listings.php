@@ -358,11 +358,11 @@ $locations[] = array(
 							<label for="type-both">Both</span>
 						</div>-->
 						<!--<div class="button">
-							<input type="radio" name="type" value="Residential" id="type-residential" class="" data-filter="Residential" <?php if ( $load_type == 'Residential' ) { echo 'checked'; } ?>>
+							<input type="radio" name="type" value="Residential" id="type-residential" class="" data-filter="Residential" <?php //if ( $load_type == 'Residential' ) { echo 'checked'; } ?>>
 							<label for="type-residential">Residential</label>
 						</div>
 						<div class="button">
-							<input type="radio" name="type" value="Commercial" id="type-commercial" class="" data-filter="Commercial" <?php if ( $load_type == 'Commercial' ) { echo 'checked'; } ?>>
+							<input type="radio" name="type" value="Commercial" id="type-commercial" class="" data-filter="Commercial" <?php //if ( $load_type == 'Commercial' ) { echo 'checked'; } ?>>
 							<label for="type-commercial">Commercial</label>
 						</div>
 					</div>

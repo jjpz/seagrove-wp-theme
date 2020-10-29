@@ -5,19 +5,76 @@
 }
 
 .edit-post-meta-boxes-area .postbox {
-	margin: 15px auto;
+	margin: 15px;
+}
+
+.edit-post-meta-boxes-area #permalink-manager.postbox {
+	margin: 0;
+}
+
+#poststuff #permalink-manager.postbox .postbox-header h2 {
+	font-size: 13px;
 }
 
 .cf-container .cf-field.admin-col-4 {
 	flex: 1 1 33.333333%;
 }
 
+.admin-col-6,
 .cf-container .cf-field.admin-col-6 {
 	flex: 1 1 50%;
 }
 
 .cf-container .cf-field.admin-col-8 {
 	flex: 1 1 66.666667%;
+}
+
+.block-editor .cf-field.cf-text {
+	position: relative;
+	padding: 15px 0;
+}
+
+.cf-field.cf-text:before {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 0;
+	background: #f9f9f9;
+	border-color: #e1e1e1;
+	border-style: solid;
+	border-width: 0 1px 0 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 20%;
+}
+
+.cf-field.cf-text:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.cf-field.cf-text .cf-field__head {
+	position: relative;
+	float: left;
+	width: 20%;
+	margin: 0;
+	padding: 0 12px;
+}
+
+.cf-field.cf-text .cf-field__label {
+	display: block;
+	font-weight: bold;
+	margin: 0 0 3px;
+	padding: 0;
+}
+
+.cf-field.cf-text .cf-field__body {
+	float: left;
+	width: 80%;
+	margin: 0;
+	padding: 0 12px;
 }
 
 th#availability,
@@ -31,4 +88,19 @@ th#permalink-manager-col {
 
 th#price {
 	width: 9%;
+}
+
+@media screen and (max-width: 640px) {
+	.cf-field.cf-text:before {
+		content: none;
+	}
+
+	.cf-field.cf-text .cf-field__head {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.cf-field.cf-text .cf-field__body {
+		width: 100%;
+	}
 }

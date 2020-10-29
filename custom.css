@@ -88,6 +88,8 @@ body {
 	font-size: 14px;
 	font-weight: normal;
 	color: #002c3f;
+	text-size-adjust: none;
+	text-rendering: optimizeLegibility;
 }
 
 body.lock {
@@ -108,13 +110,14 @@ body.lock {
 	justify-content: center;
 	background: #fff;
 	opacity: 1;
-	transition: opacity 0.5s linear;
+	transition: opacity 0.5s;
 	z-index: 999;
 }
 
 .loader-logo {
 	width: 100px;
 	height: 100px;
+	transition: opacity 0.25s;
 }
 
 .spinner {
@@ -124,6 +127,7 @@ body.lock {
 	overflow: hidden;
 	position: relative;
 	background: rgba(0, 44, 63, 0.25);
+	transition: opacity 0.25s;
 }
 
 .spinner::before {
@@ -1201,6 +1205,9 @@ transition: all 0.25s ease;*/
 
 .close-button {
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 20px;
 	height: 20px;
 	opacity: 0.5;
@@ -1210,7 +1217,6 @@ transition: all 0.25s ease;*/
 .close-button:before,
 .close-button:after {
 	position: absolute;
-	left: 10px;
 	content: ' ';
 	height: 20px;
 	width: 2px;
@@ -2841,6 +2847,10 @@ li.property-marketing-item a svg {
 	.contact-float {
 		bottom: 60px;
 	}
+
+	.contact-float-container {
+		justify-content: center;
+	}
 }
 
 /* contact */
@@ -3407,6 +3417,7 @@ body.single-agent-sell .clone-footer {
 .modal.youtube-modal {
 	bottom: auto;
 	height: auto;
+	overflow: visible;
 }
 
 .modal-overlay {
@@ -3560,9 +3571,17 @@ a.btn-modal.btn-copy.open + .tooltip {
 	visibility: visible;
 }
 
+.youtube-modal .close-filters {
+	top: unset;
+	bottom: -45px;
+	right: 15px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #000;
+}
+
 @media (max-width: 900px) {
 	.youtube-modal .close-filters {
-		top: auto;
-		bottom: 20px;
 	}
 }
