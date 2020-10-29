@@ -58,7 +58,7 @@ function floatingContact(){
 			$('.contact-float').css('right', right);
 		} else {
 			$('.contact-float-btn').css('width', 'auto');
-			$('.contact-float').css('right', '2.5%');
+			//$('.contact-float').css('right', '2.5%');
 		}
 		
 		if ( !$('body').hasClass('home') ) {

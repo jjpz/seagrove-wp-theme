@@ -1277,7 +1277,8 @@ body.single-agent.single-agent-clone.single-agent-buy .site-content {
 
 @media (max-width: 1280px) {
 	.site-content,
-	body.home .site-content {
+	body.home .site-content,
+	body.home .site-content.sticky {
 		margin-top: 60px;
 	}
 
@@ -2790,10 +2791,20 @@ li.property-marketing-item a svg {
 	display: block;
 	position: fixed;
 	bottom: 15px;
-	right: 2.5%;
+	width: 100%;
 	transform: translateY(0);
 	transition: all 0.25s;
+	pointer-events: none;
 	z-index: 1;
+}
+
+.contact-float-container {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	max-width: 2560px;
+	margin: 0 auto;
+	padding: 0 2.5%;
 }
 
 .contact-float-btn {
@@ -2808,6 +2819,7 @@ li.property-marketing-item a svg {
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
+	pointer-events: auto;
 }
 
 .contact-float-main .contact-float-btn {
