@@ -1,7 +1,9 @@
-/favicons/
-/fonts/
-/icons/
-/images/
-/languages/
-/vendor/
+favicons
+fonts
+icons
+images
+languages
+node_modules
+vendor
 screenshot.png
+__style.css

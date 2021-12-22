@@ -4,24 +4,28 @@
 
 @font-face {
 	font-family: 'Gotham-Book';
-	src: url('fonts/Gotham-Book/Gotham-Book.eot?#iefix')
+	src: url('assets/dist/fonts/Gotham-Book/Gotham-Book.eot?#iefix')
 			format('embedded-opentype'),
-		url('fonts/Gotham-Book/Gotham-Book.otf') format('opentype'),
-		url('fonts/Gotham-Book/Gotham-Book.woff') format('woff'),
-		url('fonts/Gotham-Book/Gotham-Book.ttf') format('truetype'),
-		url('fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book') format('svg');
+		url('assets/dist/fonts/Gotham-Book/Gotham-Book.otf') format('opentype'),
+		url('assets/dist/fonts/Gotham-Book/Gotham-Book.woff') format('woff'),
+		url('assets/dist/fonts/Gotham-Book/Gotham-Book.ttf') format('truetype'),
+		url('assets/dist/fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book')
+			format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Gotham-BookItalic';
-	src: url('fonts/Gotham-BookItalic/Gotham-BookItalic.eot?#iefix')
+	src: url('assets/dist/fonts/Gotham-BookItalic/Gotham-BookItalic.eot?#iefix')
 			format('embedded-opentype'),
-		url('fonts/Gotham-BookItalic/Gotham-BookItalic.otf') format('opentype'),
-		url('fonts/Gotham-BookItalic/Gotham-BookItalic.woff') format('woff'),
-		url('fonts/Gotham-BookItalic/Gotham-BookItalic.ttf') format('truetype'),
-		url('fonts/Gotham-BookItalic/Gotham-BookItalic.svg#Gotham-BookItalic')
+		url('assets/dist/fonts/Gotham-BookItalic/Gotham-BookItalic.otf')
+			format('opentype'),
+		url('assets/dist/fonts/Gotham-BookItalic/Gotham-BookItalic.woff')
+			format('woff'),
+		url('assets/dist/fonts/Gotham-BookItalic/Gotham-BookItalic.ttf')
+			format('truetype'),
+		url('assets/dist/fonts/Gotham-BookItalic/Gotham-BookItalic.svg#Gotham-BookItalic')
 			format('svg');
 	font-weight: normal;
 	font-style: normal;
@@ -29,28 +33,12 @@
 
 @font-face {
 	font-family: 'Gotham-Bold';
-	src: url('fonts/Gotham-Bold/Gotham-Bold.eot?#iefix')
+	src: url('assets/dist/fonts/Gotham-Bold/Gotham-Bold.eot?#iefix')
 			format('embedded-opentype'),
-		url('fonts/Gotham-Bold/Gotham-Bold.otf') format('opentype'),
-		url('fonts/Gotham-Bold/Gotham-Bold.woff') format('woff'),
-		url('fonts/Gotham-Bold/Gotham-Bold.ttf') format('truetype'),
-		url('fonts/Gotham-Bold/Gotham-Bold.svg#Gotham-Bold') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Palatino Linotype';
-	src: url('fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.eot');
-	src: url('fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.eot?#iefix')
-			format('embedded-opentype'),
-		url('fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.woff2')
-			format('woff2'),
-		url('fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.woff')
-			format('woff'),
-		url('fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.ttf')
-			format('truetype'),
-		url('fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.svg#PalatinoLinotype-Roman')
+		url('assets/dist/fonts/Gotham-Bold/Gotham-Bold.otf') format('opentype'),
+		url('assets/dist/fonts/Gotham-Bold/Gotham-Bold.woff') format('woff'),
+		url('assets/dist/fonts/Gotham-Bold/Gotham-Bold.ttf') format('truetype'),
+		url('assets/dist/fonts/Gotham-Bold/Gotham-Bold.svg#Gotham-Bold')
 			format('svg');
 	font-weight: normal;
 	font-style: normal;
@@ -58,16 +46,33 @@
 
 @font-face {
 	font-family: 'Palatino Linotype';
-	src: url('fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.eot');
-	src: url('fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.eot?#iefix')
+	src: url('assets/dist/fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.eot');
+	src: url('assets/dist/fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.eot?#iefix')
 			format('embedded-opentype'),
-		url('fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.woff2')
+		url('assets/dist/fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.woff2')
 			format('woff2'),
-		url('fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.woff')
+		url('assets/dist/fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.woff')
 			format('woff'),
-		url('fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.ttf')
+		url('assets/dist/fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.ttf')
 			format('truetype'),
-		url('fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.svg#PalatinoLinotype-Italic')
+		url('assets/dist/fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.svg#PalatinoLinotype-Roman')
+			format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Palatino Linotype';
+	src: url('assets/dist/fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.eot');
+	src: url('assets/dist/fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.eot?#iefix')
+			format('embedded-opentype'),
+		url('assets/dist/fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.woff2')
+			format('woff2'),
+		url('assets/dist/fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.woff')
+			format('woff'),
+		url('assets/dist/fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.ttf')
+			format('truetype'),
+		url('assets/dist/fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.svg#PalatinoLinotype-Italic')
 			format('svg');
 	font-weight: normal;
 	font-style: italic;

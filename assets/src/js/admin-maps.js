@@ -1,3 +1,5 @@
+import '../css/admin-maps.css';
+
 function initialize(){
 
 var hlat = parseFloat(helper.lat);
