@@ -254,16 +254,16 @@
 	padding: 5px 15px;
 	border: 1px solid #002c3f;
 	border-radius: 3px;
-	background: #002c3f;
-	color: #fff;
+	background: #fff;
+	color: #002c3f;
 	text-transform: uppercase;
 	cursor: pointer;
 	transition: all 0.25s;
 }
 
 #loadmore:hover {
-	background: #fff;
-	color: #002c3f;
+	background: #002c3f;
+	color: #fff;
 }
 
 .hidden {
@@ -638,8 +638,8 @@
 	padding: 5px 15px;
 	border: 1px solid #002c3f;
 	border-radius: 3px;
-	background: #fff;
-	color: #002c3f;
+	background: #002c3f;
+	color: #fff;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -647,7 +647,8 @@
 }
 
 .map-filter-btn:hover {
-	background: #002c3f;
+	background: #4e9dbb;
+	border-color: #4e9dbb;
 	color: #fff;
 	text-decoration: none;
 }

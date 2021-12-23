@@ -454,6 +454,14 @@ transition: all .05s;*/
 	border: 0;
 }
 
+.flag.relative {
+	position: relative;
+	display: inline-flex;
+	width: auto;
+	top: 0;
+	bottom: 0;
+}
+
 hr.separator {
 	display: block;
 	height: 1.5px;
@@ -1388,6 +1396,10 @@ body.single-agent.single-agent-clone.single-agent-buy .site-content {
 	font-style: italic;
 }
 
+.slide-address {
+	margin-top: 5px;
+}
+
 .slide-address p {
 	line-height: 1.5;
 	font-family: 'Gotham-Bold';
@@ -1844,7 +1856,7 @@ body.single-property-marketing .property-address {
 }
 
 .property-address h1 {
-	margin: 0 0 4px;
+	margin: 10px 0 4px;
 }
 
 .property-address h2 {
