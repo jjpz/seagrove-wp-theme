@@ -39,6 +39,14 @@
                 $marketing_assets_print = carbon_get_post_meta($ID, 'crb_property_marketing_assets_print');
                 $agents = get_field('property_agents', $ID);
 
+                $allAgents = get_posts(array(
+                    'post_type' => 'agent',
+                    'post_status' => 'publish',
+                    'numberposts' => -1,
+                    'order' => 'ASC',
+                    'orderby' => 'title'
+                ));
+
                 function agentCloneLinks($propertyLink) {
                     $agents = get_posts(array(
                         'post_type' => 'agent',
@@ -248,8 +256,19 @@
                                     </div>
                                     <div class="property-agent-links">
                                         <p class="property-marketing-assets-title">Agent Pages</p>
+                                        <div class="filters agents">
+                                            <select name="select-agent-page" id="select-agent-page" onchange="if (this.value) window.open(this.value)">
+                                                <option value="">Select an agent</option>
+                                                <?php foreach ($allAgents as $agent) { ?>
+                                                    <option value="<?php echo get_the_permalink($agent->ID); ?>">
+                                                        <?php echo $agent->post_title; ?>
+                                                    </option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
                                         <ul class="row">
-                                            <?php agentCloneLinks($link); ?>
+                                            <?php // agentCloneLinks($link); 
+                                            ?>
                                         </ul>
                                     </div>
                                 </div>

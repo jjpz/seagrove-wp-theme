@@ -590,6 +590,7 @@ body.single-property .main-navigation,
 body.page-template-page-buy .main-navigation,
 body.single-agent-clone.single-agent-home .main-navigation,
 body.single-agent-clone.single-agent-buy .main-navigation,
+body.single-agent-clone.single-agent-sell .main-navigation,
 body.single-agent-clone.single-agent-sell .main-navigation {
 	position: relative;
 	background-color: transparent;
@@ -599,7 +600,8 @@ body.single-agent-clone.single-agent-sell .main-navigation {
 body.home .main-nav-gradient,
 body.page-template-page-buy .main-nav-gradient,
 body.single-agent-clone.single-agent-home .main-nav-gradient,
-body.single-agent-clone.single-agent-buy .main-nav-gradient {
+body.single-agent-clone.single-agent-buy .main-nav-gradient,
+body.single-agent-clone.single-agent-sell .main-nav-gradient {
 	display: block;
 	opacity: 1;
 	filter: alpha(opacity=100);
@@ -609,7 +611,8 @@ body.single-agent-clone.single-agent-buy .main-nav-gradient {
 body.home .main-nav-container,
 body.page-template-page-buy .main-nav-container,
 body.single-agent-clone.single-agent-home .main-nav-container,
-body.single-agent-clone.single-agent-buy .main-nav-container {
+body.single-agent-clone.single-agent-buy .main-nav-container,
+body.single-agent-clone.single-agent-sell .main-nav-container {
 	background-color: transparent;
 	transition: all 0.25s;
 }
@@ -794,7 +797,8 @@ body.page-template-page-buy
 
 body.home .main-navigation a,
 body.page-template-page-buy .main-navigation a,
-body.single-agent-clone.single-agent-buy .main-navigation a {
+body.single-agent-clone.single-agent-buy .main-navigation a,
+body.single-agent-clone.single-agent-sell .main-navigation a {
 	color: #fff;
 }
 
@@ -1273,7 +1277,7 @@ body.home .site-content.sticky {
 body.page-template-page-buy .site-content {
 	margin-top: 160px;
 	margin-bottom: 160px;
-	color: #fff;
+	/* color: #fff; */
 }
 
 body.page-template-page-sell .site-content {
@@ -1722,6 +1726,16 @@ body.single-agent-buy .home-intro-content-title {
 	}
 }
 
+/* join our team page */
+
+body.page-template-page-join-our-team {
+	background: #002c3f;
+}
+
+body.page-template-page-join-our-team .site-content {
+	color: #fff;
+}
+
 /* buying page */
 
 .buy-items {
@@ -1732,6 +1746,12 @@ body.single-agent-buy .home-intro-content-title {
 	margin-bottom: 0;
 	padding-left: 25px;
 	padding-bottom: 45px;
+	border-left: 1px dashed rgba(0, 44, 63, 0.5);
+}
+
+body.single-agent.single-agent-clone.single-agent-buy
+	.buy-items
+	.home-about-item {
 	border-left: 1px dashed rgba(255, 255, 255, 0.5);
 }
 
@@ -1762,9 +1782,9 @@ body.single-agent-buy .home-intro-content-title {
 	margin-top: 60px;
 }
 
-body.page-template-page-buy {
+/* body.page-template-page-buy {
 	background: #002c3f;
-}
+} */
 
 body.single-agent.single-agent-clone.single-agent-buy {
 	background: #002c3f;
@@ -1799,8 +1819,28 @@ body.single-agent-sell .single-agent-sell-image .agent-avatar {
 	margin-bottom: 90px;
 }
 
+.sell-intro-content {
+	margin-bottom: 15px;
+}
+
+.sell-intro ul {
+	list-style: disc;
+}
+
+.sell-intro ul li a {
+	cursor: pointer;
+}
+
 .sell-buttons {
 	margin: 180px auto 90px;
+}
+
+body.single-agent.single-agent-clone.single-agent-sell {
+	background: #002c3f;
+}
+
+body.single-agent.single-agent-clone.single-agent-sell .site-content {
+	color: #fff;
 }
 
 body.single-agent-sell .sell-buttons {
@@ -2371,15 +2411,20 @@ a.map-dir-btn {
 	margin-bottom: 105px;
 }
 
-.marketing-item .row {
+/* .marketing-item .row {
 	background: #e7e7e9;
-}
+} */
 
 .marketing-item .post-thumbnail {
 	position: relative;
-	width: 100%;
+	width: calc(100% + 15px);
 	padding-top: 75%;
 	overflow: hidden;
+	background: #e7e7e9;
+}
+
+.marketing-item .post-thumbnail.image-right {
+	margin-left: -15px;
 }
 
 .marketing-item img {
@@ -2395,9 +2440,20 @@ a.map-dir-btn {
 .marketing-item img.lazy {
 }
 
+.marketing-item-content {
+	/* width: calc(100% + 15px); */
+	margin-top: 15px;
+	background: #e7e7e9;
+}
+
+/* .marketing-item-content.content-right {
+	margin-left: -15px;
+} */
+
 .marketing-item-info {
 	padding: 50px;
 	word-wrap: break-word;
+	color: #002c3f;
 }
 
 .marketing-grid-header {
@@ -2415,6 +2471,10 @@ a.map-dir-btn {
 
 .marketing-grid {
 	margin: 0 auto;
+}
+
+body.page-template-page-consulting .marketing-grid {
+	margin-bottom: 90px;
 }
 
 .marketing-grid-item {
@@ -2529,7 +2589,16 @@ a.map-dir-btn {
 
 @media (max-width: 767px) {
 	.marketing-item .post-thumbnail {
+		width: 100%;
 		padding-top: 75%;
+	}
+
+	.marketing-item .post-thumbnail.image-right {
+		margin-left: 0;
+	}
+
+	.marketing-item-content {
+		margin-top: 0;
 	}
 
 	.marketing-item-info {
@@ -3248,6 +3317,10 @@ body.single-agent-clone .contact-bar {
 	text-transform: uppercase;
 }
 
+.site-footer .footer-menu a {
+	letter-spacing: 1.5px;
+}
+
 .site-footer .contact-menu li p {
 	display: flex;
 }
@@ -3255,6 +3328,7 @@ body.single-agent-clone .contact-bar {
 .site-footer .contact-menu li a {
 	display: flex;
 	align-items: flex-start;
+	text-transform: none;
 }
 
 .site-footer .contact-menu li a .icon {
@@ -3316,11 +3390,11 @@ body.single-agent-clone .contact-bar {
 	transition: all 0.25s;
 }
 
-body.single-agent-sell .clone-footer .copyright p a,
+/* body.single-agent-sell .clone-footer .copyright p a,
 body.single-agent-sell .clone-footer .copyright p span {
 	color: #002c3f;
 	opacity: 0.75;
-}
+} */
 
 .site-footer .copyright p span,
 .clone-footer .copyright p span {
@@ -3338,9 +3412,9 @@ body.single-agent-sell .clone-footer .copyright p span {
 	background-color: #002c3f;
 }
 
-body.single-agent-sell .clone-footer {
+/* body.single-agent-sell .clone-footer {
 	background-color: #fff;
-}
+} */
 
 @media (max-width: 1280px) {
 	.site-footer .footer-container {
