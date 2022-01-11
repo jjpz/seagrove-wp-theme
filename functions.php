@@ -1,5 +1,7 @@
 <?php
 
+include '.env.php';
+
 /**
  * seagrove functions and definitions
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
@@ -161,7 +163,7 @@ function seagrove_scripts() {
 	}
 
 	if (is_page_template(array('page-map.php', 'page-listings.php', 'page-sold.php', 'page-commercial.php', 'page-contact.php')) || is_singular(array('property', 'agent'))) {
-		$API_KEY = 'AIzaSyCOIFLDkRXYDQgdf8AFQdpzYd_io6sQ8fk';
+		$API_KEY = getenv('GMAPS_API_KEY');
 		wp_enqueue_script('google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=' . $API_KEY, array(), '', true);
 		wp_enqueue_script('markerclusterer-js', 'https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js', array(), '', true);
 		wp_enqueue_script('maps-js', get_template_directory_uri() . '/assets/dist/js/maps.min.js', array('jquery'), '1.0', true);
@@ -189,7 +191,7 @@ if (wp_get_environment_type() === 'local') {
 	include_once __DIR__ . '/vendor/autoload.php';
 	// Register error handler to report to Sentry
 	Sentry\init([
-		'dsn' => 'https://3c469203698f4dd09465c2708d197bf9@o462777.ingest.sentry.io/5467428',
+		'dsn' => getenv('SENTRY_DSN'),
 		// Be sure to lower this in production to prevent quota issues
 		'traces_sample_rate' => 1.0,
 	]);

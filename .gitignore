@@ -3,10 +3,10 @@ fonts
 icons
 images
 languages
-node_modules
 vendor
+node_modules
 screenshot.png
-__*.*
-# __style.css
-# __single-property.php
+.env*
+__*
+*Copy*
 *.LICENSE.txt
