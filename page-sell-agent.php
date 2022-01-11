@@ -57,7 +57,7 @@ foreach ($selling as $page) {
 							<h1 class="h1-big"><?php echo $page_title; ?></h1>
 						</div>
 						<div class="home-intro-content-title">
-							<h3 class="h3-new"><?php echo $page_content; ?></h3>
+							<h3 class="font-fam-gotham-book"><?php echo $page_content; ?></h3>
 						</div>
 					</div>
 

@@ -773,7 +773,8 @@
 
 .form-header {
 	margin-bottom: 15px;
-	text-transform: uppercase;
+	font-family: 'Palatino-Italic';
+	font-size: 14px;
 }
 
 .form-section {
@@ -1055,6 +1056,7 @@ input[type='radio']:checked + .radio-check::before {
 	opacity: 0.5;
 	font-size: 12px;
 	text-decoration: none;
+	text-transform: uppercase;
 	transition: all 0.25s;
 }
 

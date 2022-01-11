@@ -121,7 +121,7 @@
 										$img = wp_get_attachment_image($image, 'thumbnail', false, array('src' => '', 'data-lazy' => $src));
 									}
 									?>
-									<div class="slide property-slide" data-nav-title="<? php ?>">
+									<div class="slide property-slide" data-nav-title="">
 										<div class="slide-image property-slide-image">
 											<?php echo $img; ?>
 											<a href="#"></a>
@@ -468,10 +468,6 @@
 
 <script>
 	jQuery(document).ready(function($) {
-		$('#slider').on('init', function(slick) {
-			$('#slider .slide a').focus();
-		});
-
 		$('#slider').slick({
 			lazyLoad: 'ondemand',
 			infinite: true,
@@ -566,4 +562,4 @@ fbShare.onclick = function(e) {
 	});
 };*/
 </script>
-<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+<!-- <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script> -->

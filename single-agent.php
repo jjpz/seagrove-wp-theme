@@ -577,7 +577,7 @@ if (!empty($terms)) {
 									<form id="map-filters" action="" method="" name="map-filters" class="map-filters">
 										<div class="form-content">
 											<div id="filters" class="form-col filters">
-												<div class="form-header">Filter By</div>
+												<div class="form-header">Filter by</div>
 
 												<input type="hidden" name="agent" value="<?php echo $agent_id; ?>">
 
@@ -774,7 +774,7 @@ if (!empty($terms)) {
 											<div class="form-sep"></div>
 
 											<div id="sorts" class="form-col sorts">
-												<div class="form-header">Sort By</div>
+												<div class="form-header">Sort by</div>
 												<div class="form-section sort-section">
 
 													<ul class="sort-col">
@@ -792,7 +792,7 @@ if (!empty($terms)) {
 																																																						echo 'checked';
 																																																					} ?>>
 																<div class="radio-check"></div>
-																<div class="radio-text"><span>Availability</span></div>
+																<div class="radio-text"><span>AVAILABILITY</span></div>
 															</label>
 														</li>
 

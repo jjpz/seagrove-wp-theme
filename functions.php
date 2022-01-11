@@ -188,7 +188,11 @@ if (wp_get_environment_type() === 'local') {
 	// Include the composer autoloader for the Sentry library
 	include_once __DIR__ . '/vendor/autoload.php';
 	// Register error handler to report to Sentry
-	Sentry\init(['dsn' => 'https://3c469203698f4dd09465c2708d197bf9@o462777.ingest.sentry.io/5467428']);
+	Sentry\init([
+		'dsn' => 'https://3c469203698f4dd09465c2708d197bf9@o462777.ingest.sentry.io/5467428',
+		// Be sure to lower this in production to prevent quota issues
+		'traces_sample_rate' => 1.0,
+	]);
 	// Sample error
-	//throw new Exception("My first Sentry error!");
+	//throw new Exception("TEST ERROR!");
 }

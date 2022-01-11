@@ -28,8 +28,10 @@
 		$consulting_bottom_items = carbon_get_post_meta($ID, 'crb_consulting_bottom_items');
 		$consulting_bottom_title = carbon_get_post_meta($ID, 'crb_consulting_bottom_title');
 		$consulting_bottom_content = carbon_get_post_meta($ID, 'crb_consulting_bottom_text');
-		$contact_title = carbon_get_post_meta($ID, 'crb_consulting_contact_title');
-		$contact_subtitle = carbon_get_post_meta($ID, 'crb_consulting_contact_subtitle');
+		$consulting_cal_url = carbon_get_post_meta($ID, 'crb_consulting_calendly-url');
+		$consulting_cal_text = carbon_get_post_meta($ID, 'crb_consulting_calendly-text');
+		// $contact_title = carbon_get_post_meta($ID, 'crb_consulting_contact_title');
+		// $contact_subtitle = carbon_get_post_meta($ID, 'crb_consulting_contact_subtitle');
 		// $shortcode = carbon_get_post_meta($ID, 'crb_consulting_contact_shortcode');
 		?>
 
@@ -212,5 +214,29 @@
 
 	</main>
 </div>
+
+<?php if (!empty($consulting_cal_url)) { ?>
+	<div class="contact-float contact-float-main">
+		<div class="contact-float-container">
+			<a href="<?php echo $consulting_cal_url; ?>" class="contact-float-btn" target="_blank" style="width: auto;">
+				<span class="contact-bar-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+						<path d="M144,128h32a16.047,16.047,0,0,0,16-16V16A16.047,16.047,0,0,0,176,0H144a16.047,16.047,0,0,0-16,16v96A16.047,16.047,0,0,0,144,128Z" fill="#ffffff" />
+						<path d="M336,128h32a16.047,16.047,0,0,0,16-16V16A16.047,16.047,0,0,0,368,0H336a16.047,16.047,0,0,0-16,16v96A16.047,16.047,0,0,0,336,128Z" fill="#ffffff" />
+						<path d="M32,464a48.012,48.012,0,0,0,48,48H432a48.012,48.012,0,0,0,48-48V200H32ZM352,268a12.035,12.035,0,0,1,12-12h40a12.035,12.035,0,0,1,12,12v40a12.035,12.035,0,0,1-12,12H364a12.035,12.035,0,0,1-12-12Zm0,128a12.035,12.035,0,0,1,12-12h40a12.035,12.035,0,0,1,12,12v40a12.035,12.035,0,0,1-12,12H364a12.035,12.035,0,0,1-12-12ZM224,268a12.035,12.035,0,0,1,12-12h40a12.035,12.035,0,0,1,12,12v40a12.035,12.035,0,0,1-12,12H236a12.035,12.035,0,0,1-12-12Zm0,128a12.035,12.035,0,0,1,12-12h40a12.035,12.035,0,0,1,12,12v40a12.035,12.035,0,0,1-12,12H236a12.035,12.035,0,0,1-12-12ZM96,268a12.035,12.035,0,0,1,12-12h40a12.035,12.035,0,0,1,12,12v40a12.035,12.035,0,0,1-12,12H108a12.035,12.035,0,0,1-12-12Zm0,128a12.035,12.035,0,0,1,12-12h40a12.035,12.035,0,0,1,12,12v40a12.035,12.035,0,0,1-12,12H108a12.035,12.035,0,0,1-12-12Z" fill="#ffffff" />
+						<path d="M432,64H400v48a32.036,32.036,0,0,1-32,32H336a32.036,32.036,0,0,1-32-32V64H208v48a32.036,32.036,0,0,1-32,32H144a32.036,32.036,0,0,1-32-32V64H80a48.012,48.012,0,0,0-48,48v72H480V112A48.012,48.012,0,0,0,432,64Z" fill="#ffffff" />
+					</svg>
+				</span>
+				<span>
+					<?php if (!empty($consulting_cal_text)) {
+						echo $consulting_cal_text;
+					} else {
+						echo 'Schedule a Meeting';
+					} ?>
+				</span>
+			</a>
+		</div>
+	</div>
+<?php } ?>
 
 <?php get_footer(); ?>

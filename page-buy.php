@@ -29,7 +29,7 @@ $buy_btn_text = carbon_get_post_meta(get_the_ID(), 'crb_buy_about_btn_text');
 					<div class="col-lg-6">
 						<div class="home-intro-content">
 							<div class="home-intro-content-title">
-								<h3 class="h3-new"><?php echo $page_content; ?></h3>
+								<h3 class="font-fam-gotham-book"><?php echo $page_content; ?></h3>
 							</div>
 
 							<div class="buy-items">
@@ -92,7 +92,7 @@ $buy_btn_text = carbon_get_post_meta(get_the_ID(), 'crb_buy_about_btn_text');
 
 <?php get_footer(); ?>
 
-<script>
+<!-- <script>
 	jQuery(document).ready(function($) {
 
 		var nav = $('#main-navigation');
@@ -106,10 +106,12 @@ $buy_btn_text = carbon_get_post_meta(get_the_ID(), 'crb_buy_about_btn_text');
 		function on() {
 			if (width <= 1280) {
 				nav.addClass('on');
-				nav.find('.site-branding img').attr('src', '<?php echo get_stylesheet_directory_uri() . '/images/logo-color.svg' ?>');
+				nav.find('.site-branding img').attr('src', '<?php // echo get_stylesheet_directory_uri() . '/images/logo-color.svg' 
+															?>');
 			} else {
 				nav.removeClass('on');
-				nav.find('.site-branding img').attr('src', '<?php echo get_stylesheet_directory_uri() . '/images/logo-white.svg' ?>');
+				nav.find('.site-branding img').attr('src', '<?php // echo get_stylesheet_directory_uri() . '/images/logo-white.svg' 
+															?>');
 			}
 		}
 		on();
@@ -120,13 +122,15 @@ $buy_btn_text = carbon_get_post_meta(get_the_ID(), 'crb_buy_about_btn_text');
 
 		nav.mouseover(function() {
 			if (!nav.hasClass('on') && !nav.hasClass('sticky')) {
-				nav.find('.site-branding img').attr('src', '<?php echo get_stylesheet_directory_uri() . '/images/logo-color.svg' ?>');
+				nav.find('.site-branding img').attr('src', '<?php // echo get_stylesheet_directory_uri() . '/images/logo-color.svg' 
+															?>');
 			}
 		});
 
 		nav.mouseout(function() {
 			if (!nav.hasClass('on') && !nav.hasClass('sticky')) {
-				nav.find('.site-branding img').attr('src', '<?php echo get_stylesheet_directory_uri() . '/images/logo-white.svg' ?>');
+				nav.find('.site-branding img').attr('src', '<?php // echo get_stylesheet_directory_uri() . '/images/logo-white.svg' 
+															?>');
 			}
 		});
 
@@ -139,12 +143,14 @@ $buy_btn_text = carbon_get_post_meta(get_the_ID(), 'crb_buy_about_btn_text');
 			if (top > intro) {
 				nav.addClass('sticky');
 				content.addClass('sticky');
-				nav.find('.site-branding img').attr('src', '<?php echo get_stylesheet_directory_uri() . '/images/logo-color.svg' ?>');
+				nav.find('.site-branding img').attr('src', '<?php // echo get_stylesheet_directory_uri() . '/images/logo-color.svg' 
+															?>');
 			} else {
 				nav.removeClass('sticky');
 				content.removeClass('sticky');
 				if (!nav.hasClass('on')) {
-					nav.find('.site-branding img').attr('src', '<?php echo get_stylesheet_directory_uri() . '/images/logo-white.svg' ?>');
+					nav.find('.site-branding img').attr('src', '<?php // echo get_stylesheet_directory_uri() . '/images/logo-white.svg' 
+																?>');
 				}
 			}
 		}
@@ -152,4 +158,4 @@ $buy_btn_text = carbon_get_post_meta(get_the_ID(), 'crb_buy_about_btn_text');
 		$(window).scroll(sticky);
 
 	});
-</script>
+</script> -->

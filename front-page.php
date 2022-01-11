@@ -84,7 +84,7 @@ $slides = get_posts(array(
 							}
 						}
 						?>
-						<div class="slide home-slide" data-nav-title="<? php ?>">
+						<div class="slide home-slide" data-nav-title="">
 							<div class="slide-image property-slide-image">
 								<?php echo $img; ?>
 							</div>

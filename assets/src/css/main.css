@@ -3,6 +3,68 @@
 /* fonts */
 
 @font-face {
+	font-family: 'Gotham-Bold';
+	src: url('assets/dist/fonts/Gotham/Gotham-Bold.eot');
+	src: url('assets/dist/fonts/Gotham/Gotham-Bold.eot?#iefix')
+			format('embedded-opentype'),
+		url('assets/dist/fonts/Gotham/Gotham-Bold.woff2') format('woff2'),
+		url('assets/dist/fonts/Gotham/Gotham-Bold.woff') format('woff'),
+		url('assets/dist/fonts/Gotham/Gotham-Bold.ttf') format('truetype'),
+		url('assets/dist/fonts/Gotham/Gotham-Bold.svg#Gotham-Bold')
+			format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('assets/dist/fonts/Gotham/Gotham-Book.eot');
+	src: url('assets/dist/fonts/Gotham/Gotham-Book.eot?#iefix')
+			format('embedded-opentype'),
+		url('assets/dist/fonts/Gotham/Gotham-Book.woff2') format('woff2'),
+		url('assets/dist/fonts/Gotham/Gotham-Book.woff') format('woff'),
+		url('assets/dist/fonts/Gotham/Gotham-Book.ttf') format('truetype'),
+		url('assets/dist/fonts/Gotham/Gotham-Book.svg#Gotham-Book')
+			format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gotham-Ultra';
+	src: url('assets/dist/fonts/Gotham/Gotham-Ultra.eot');
+	src: url('assets/dist/fonts/Gotham/Gotham-Ultra.eot?#iefix')
+			format('embedded-opentype'),
+		url('assets/dist/fonts/Gotham/Gotham-Ultra.woff2') format('woff2'),
+		url('assets/dist/fonts/Gotham/Gotham-Ultra.woff') format('woff'),
+		url('assets/dist/fonts/Gotham/Gotham-Ultra.ttf') format('truetype'),
+		url('assets/dist/fonts/Gotham/Gotham-Ultra.svg#Gotham-Ultra')
+			format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Palatino-Italic';
+	src: url('assets/dist/fonts/PalatinoLinotype/PalatinoLinotype-Italic.eot');
+	src: url('assets/dist/fonts/PalatinoLinotype/PalatinoLinotype-Italic.eot?#iefix')
+			format('embedded-opentype'),
+		url('assets/dist/fonts/PalatinoLinotype/PalatinoLinotype-Italic.woff2')
+			format('woff2'),
+		url('assets/dist/fonts/PalatinoLinotype/PalatinoLinotype-Italic.woff')
+			format('woff'),
+		url('assets/dist/fonts/PalatinoLinotype/PalatinoLinotype-Italic.ttf')
+			format('truetype'),
+		url('assets/dist/fonts/PalatinoLinotype/PalatinoLinotype-Italic.svg#PalatinoLinotype-Italic')
+			format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+/* @font-face {
 	font-family: 'Gotham-Book';
 	src: url('assets/dist/fonts/Gotham-Book/Gotham-Book.eot?#iefix')
 			format('embedded-opentype'),
@@ -13,9 +75,9 @@
 			format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
+} */
 
-@font-face {
+/* @font-face {
 	font-family: 'Gotham-BookItalic';
 	src: url('assets/dist/fonts/Gotham-BookItalic/Gotham-BookItalic.eot?#iefix')
 			format('embedded-opentype'),
@@ -29,9 +91,9 @@
 			format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
+} */
 
-@font-face {
+/* @font-face {
 	font-family: 'Gotham-Bold';
 	src: url('assets/dist/fonts/Gotham-Bold/Gotham-Bold.eot?#iefix')
 			format('embedded-opentype'),
@@ -42,9 +104,9 @@
 			format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
+} */
 
-@font-face {
+/* @font-face {
 	font-family: 'Palatino Linotype';
 	src: url('assets/dist/fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.eot');
 	src: url('assets/dist/fonts/PalatinoLinotype-Roman/PalatinoLinotype-Roman.eot?#iefix')
@@ -59,9 +121,9 @@
 			format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
+} */
 
-@font-face {
+/* @font-face {
 	font-family: 'Palatino Linotype';
 	src: url('assets/dist/fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.eot');
 	src: url('assets/dist/fonts/PalatinoLinotype-Italic/PalatinoLinotype-Italic.eot?#iefix')
@@ -76,7 +138,7 @@
 			format('svg');
 	font-weight: normal;
 	font-style: italic;
-}
+} */
 
 /* base */
 
@@ -183,10 +245,10 @@ h1 {
 	letter-spacing: 5px;
 }
 
-h1.h1-big {
+.h1-big {
 	margin: 0;
 	line-height: 1;
-	font-family: 'Gotham-Bold';
+	font-family: 'Gotham-Ultra';
 	font-size: 90px;
 	text-transform: none;
 	letter-spacing: normal;
@@ -198,7 +260,7 @@ h2 {
 	letter-spacing: 5px;
 }
 
-h2.h2 {
+.h2 {
 	font-family: 'Palatino Linotype';
 	font-size: 28px;
 	font-style: italic;
@@ -206,7 +268,7 @@ h2.h2 {
 	letter-spacing: normal;
 }
 
-h2.h2-new {
+.h2-new {
 	font-size: 60px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
@@ -216,7 +278,7 @@ h3 {
 	font-size: 21px;
 }
 
-h3.h3-new {
+.h3-new {
 	font-family: 'Gotham-Bold';
 	font-size: 21px;
 }
@@ -234,11 +296,11 @@ h6 {
 }
 
 @media (max-width: 767px) {
-	h1.h1-big {
+	.h1-big {
 		font-size: 70px;
 	}
 
-	h2.h2-new {
+	.h2-new {
 		font-size: 40px;
 	}
 }
@@ -587,7 +649,7 @@ body.single-agent-clone.single-property .main-nav-gradient {
 
 body.home .main-navigation,
 body.single-property .main-navigation,
-body.page-template-page-buy .main-navigation,
+/* body.page-template-page-buy .main-navigation, */
 body.single-agent-clone.single-agent-home .main-navigation,
 body.single-agent-clone.single-agent-buy .main-navigation,
 body.single-agent-clone.single-agent-sell .main-navigation,
@@ -598,7 +660,7 @@ body.single-agent-clone.single-agent-sell .main-navigation {
 }
 
 body.home .main-nav-gradient,
-body.page-template-page-buy .main-nav-gradient,
+/* body.page-template-page-buy .main-nav-gradient, */
 body.single-agent-clone.single-agent-home .main-nav-gradient,
 body.single-agent-clone.single-agent-buy .main-nav-gradient,
 body.single-agent-clone.single-agent-sell .main-nav-gradient {
@@ -609,7 +671,7 @@ body.single-agent-clone.single-agent-sell .main-nav-gradient {
 }
 
 body.home .main-nav-container,
-body.page-template-page-buy .main-nav-container,
+/* body.page-template-page-buy .main-nav-container, */
 body.single-agent-clone.single-agent-home .main-nav-container,
 body.single-agent-clone.single-agent-buy .main-nav-container,
 body.single-agent-clone.single-agent-sell .main-nav-container {
@@ -617,43 +679,43 @@ body.single-agent-clone.single-agent-sell .main-nav-container {
 	transition: all 0.25s;
 }
 
-body.home .main-navigation.on,
-body.page-template-page-buy .main-navigation.on {
+body.home .main-navigation.on
+/* body.page-template-page-buy .main-navigation.on  */ {
 	position: fixed;
 }
 
 body.home .main-navigation.on,
-body.page-template-page-buy .main-navigation.on,
-body.home .main-navigation:hover,
-body.page-template-page-buy .main-navigation:hover {
+body.home .main-navigation:hover
+/* body.page-template-page-buy .main-navigation.on, */
+/* body.page-template-page-buy .main-navigation:hover  */ {
 	background-color: #fff;
 	transition: all 0.25s;
 }
 
 body.home .main-navigation.on .main-nav-gradient,
-body.page-template-page-buy .main-navigation.on .main-nav-gradient,
-body.home .main-navigation:hover .main-nav-gradient,
-body.page-template-page-buy .main-navigation:hover .main-nav-gradient {
+body.home .main-navigation:hover .main-nav-gradient
+/* body.page-template-page-buy .main-navigation.on .main-nav-gradient,
+body.page-template-page-buy .main-navigation:hover .main-nav-gradient  */ {
 	opacity: 0;
 	filter: alpha(opacity=0);
 	transition: all 0.25s;
 }
 
 body.home .main-navigation.on .main-nav-container,
-body.page-template-page-buy .main-navigation.on .main-nav-container,
-body.home .main-navigation:hover .main-nav-container,
-body.page-template-page-buy .main-navigation:hover .main-nav-container {
+body.home .main-navigation:hover .main-nav-container
+/* body.page-template-page-buy .main-navigation.on .main-nav-container,
+body.page-template-page-buy .main-navigation:hover .main-nav-container  */ {
 	background-color: #fff;
 	transition: all 0.25s;
 }
 
-body.home .main-navigation.on.sticky,
-body.page-template-page-buy .main-navigation.on.sticky {
+body.home .main-navigation.on.sticky
+/* body.page-template-page-buy .main-navigation.on.sticky  */ {
 	animation-name: none;
 }
 
-body.home .main-navigation.sticky,
-body.page-template-page-buy .main-navigation.sticky {
+body.home .main-navigation.sticky
+/* body.page-template-page-buy .main-navigation.sticky  */ {
 	position: fixed;
 	background-color: #fff;
 	animation-name: slideDown;
@@ -661,15 +723,15 @@ body.page-template-page-buy .main-navigation.sticky {
 	transition: all 0.25s;
 }
 
-body.home .main-navigation.sticky .main-nav-gradient,
-body.page-template-page-buy .main-navigation.sticky .main-nav-gradient {
+body.home .main-navigation.sticky .main-nav-gradient
+/* body.page-template-page-buy .main-navigation.sticky .main-nav-gradient  */ {
 	opacity: 0;
 	filter: alpha(opacity=0);
 	transition: all 0.25s;
 }
 
-body.home .main-navigation.sticky .main-nav-container,
-body.page-template-page-buy .main-navigation.sticky .main-nav-container {
+body.home .main-navigation.sticky .main-nav-container
+/* body.page-template-page-buy .main-navigation.sticky .main-nav-container  */ {
 	background-color: #fff;
 	transition: all 0.25s;
 }
@@ -720,18 +782,15 @@ body.page-template-page-buy .main-navigation.sticky .main-nav-container {
 	transition: all 0.25s;
 }
 
-body.home .main-nav-container .main-nav-right:before,
-body.page-template-page-buy .main-nav-container .main-nav-right:before {
+body.home .main-nav-container .main-nav-right:before
+/* body.page-template-page-buy .main-nav-container .main-nav-right:before  */ {
 	background: #fff;
 }
 
 body.home .main-navigation:hover .main-nav-right:before,
-body.page-template-page-buy .main-navigation:hover .main-nav-right:before,
-body.home .main-navigation.sticky .main-nav-container .main-nav-right:before,
-body.page-template-page-buy
-	.main-navigation.sticky
-	.main-nav-container
-	.main-nav-right:before {
+body.home .main-navigation.sticky .main-nav-container .main-nav-right:before
+/* body.page-template-page-buy .main-navigation:hover .main-nav-right:before,
+body.page-template-page-buy .main-navigation.sticky .main-nav-container .main-nav-right:before  */ {
 	background: #4e9dbb;
 	transition: all 0.25s;
 }
@@ -747,15 +806,15 @@ body.page-template-page-buy
 }
 
 @media (max-width: 1280px) {
-	body.home .main-navigation,
-	body.page-template-page-buy .main-navigation {
+	body.home .main-navigation
+	/* body.page-template-page-buy .main-navigation  */ {
 		position: fixed;
 		background-color: #fff;
 		transition: all 0.25s;
 	}
 
-	body.home .main-navigation .main-nav-gradient,
-	body.page-template-page-buy .main-navigation .main-nav-gradient {
+	body.home .main-navigation .main-nav-gradient
+	/* body.page-template-page-buy .main-navigation .main-nav-gradient  */ {
 		opacity: 0;
 		filter: alpha(opacity=0);
 		transition: all 0.25s;
@@ -796,19 +855,19 @@ body.page-template-page-buy
 }
 
 body.home .main-navigation a,
-body.page-template-page-buy .main-navigation a,
+/* body.page-template-page-buy .main-navigation a, */
 body.single-agent-clone.single-agent-buy .main-navigation a,
 body.single-agent-clone.single-agent-sell .main-navigation a {
 	color: #fff;
 }
 
-body.home .main-navigation:hover a,
-body.page-template-page-buy .main-navigation:hover a {
+body.home .main-navigation:hover a
+/* body.page-template-page-buy .main-navigation:hover a  */ {
 	color: #002c3f;
 }
 
-body.home .main-navigation.sticky a,
-body.page-template-page-buy .main-navigation.sticky a {
+body.home .main-navigation.sticky a
+/* body.page-template-page-buy .main-navigation.sticky a  */ {
 	color: #002c3f;
 }
 
@@ -1275,20 +1334,21 @@ body.home .site-content.sticky {
 }
 
 body.page-template-page-buy .site-content {
-	margin-top: 160px;
+	/* margin-top: 160px; */
 	margin-bottom: 160px;
 	/* color: #fff; */
 }
 
+body.page-template-page-buy .site-content,
 body.page-template-page-sell .site-content {
 	margin-top: 240px;
 }
 
-body.page-template-page-buy .site-content.sticky {
+/* body.page-template-page-buy .site-content.sticky {
 	margin-top: 240px;
-}
+} */
 
-body.page-template-page-buy .site-content .home-about-item a,
+/* body.page-template-page-buy .site-content .home-about-item a, */
 body.single-agent-buy .site-content .home-about-item a {
 	color: #fff;
 }
@@ -1377,7 +1437,7 @@ body.single-agent.single-agent-clone.single-agent-buy .site-content {
 	align-items: center;
 	justify-content: space-between;
 	min-height: 90px;
-	padding: 5px 20px 5px 10px;
+	padding: 10px;
 	border-radius: 3px;
 	background: #fff;
 	color: #002c3f;
@@ -1566,7 +1626,7 @@ body.single-agent.single-agent-clone.single-agent-buy .site-content {
 .home-intro-title h1 {
 	margin: 0;
 	line-height: 1;
-	font-family: 'Gotham-Bold';
+	font-family: 'Gotham-Ultra';
 	font-size: 90px;
 	text-transform: none;
 	letter-spacing: normal;
@@ -1755,7 +1815,10 @@ body.single-agent.single-agent-clone.single-agent-buy
 	border-left: 1px dashed rgba(255, 255, 255, 0.5);
 }
 
-.buy-items .home-about-item:last-child {
+.buy-items .home-about-item:last-child,
+body.single-agent.single-agent-clone.single-agent-buy
+	.buy-items
+	.home-about-item:last-child {
 	padding-bottom: 0;
 	border: none;
 }
@@ -1824,6 +1887,7 @@ body.single-agent-sell .single-agent-sell-image .agent-avatar {
 }
 
 .sell-intro ul {
+	margin-left: 15px;
 	list-style: disc;
 }
 
@@ -1856,7 +1920,12 @@ body.single-agent-sell .sell-buttons {
 }
 
 .property-title {
-	margin: 0 0 15px;
+	margin: 0;
+	line-height: 1.25;
+	font-family: 'Gotham-Book';
+	font-size: 30px;
+	text-transform: none;
+	letter-spacing: normal;
 }
 
 .property-subtitle {
@@ -1896,7 +1965,10 @@ body.single-property-marketing .property-address {
 }
 
 .property-address h1 {
-	margin: 10px 0 4px;
+	margin: 10px 0;
+	font-family: 'Gotham-Bold';
+	text-transform: none;
+	letter-spacing: normal;
 }
 
 .property-address h2 {
@@ -2247,7 +2319,10 @@ a.map-dir-btn {
 
 .agent-content h2 {
 	margin-bottom: 16px;
+	font-family: 'Gotham-Bold';
+	font-size: 14px;
 	text-transform: none;
+	letter-spacing: normal;
 }
 
 .agent-content ul {
@@ -2565,7 +2640,8 @@ body.page-template-page-consulting .marketing-grid {
 
 .partnerships-header h4 {
 	margin-bottom: 15px;
-	font-family: 'Gotham-BookItalic';
+	font-family: 'Palatino-Italic';
+	font-size: 18px;
 	color: #4e9dbb;
 }
 
@@ -2598,7 +2674,7 @@ body.page-template-page-consulting .marketing-grid {
 	}
 
 	.marketing-item-content {
-		margin-top: 0;
+		margin: -15px 15px 0;
 	}
 
 	.marketing-item-info {
@@ -2673,7 +2749,7 @@ body.page-template-page-consulting .marketing-grid {
 
 .property-link-text {
 	margin-left: 10px;
-	font-family: 'Gotham-BookItalic';
+	font-family: 'Gotham-Book';
 }
 
 .property-marketing-assets {
@@ -2682,7 +2758,7 @@ body.page-template-page-consulting .marketing-grid {
 
 .property-marketing-assets-title {
 	margin-bottom: 10px;
-	font-family: 'Gotham-BookItalic';
+	font-family: 'Gotham-Book';
 	font-size: 14px;
 	color: #4e9dbb;
 	text-transform: uppercase;
@@ -2821,6 +2897,10 @@ li.property-marketing-item a svg {
 	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
+}
+
+.contact-col .contact-property-address a {
+	text-transform: none;
 }
 
 .contact-property-share a,
@@ -3292,9 +3372,8 @@ body.single-agent-clone .contact-bar {
 
 .site-footer h4 {
 	margin: 0 0 15px;
-	font-family: 'Gotham-BookItalic';
+	font-family: 'Palatino-Italic';
 	font-weight: normal;
-	text-transform: uppercase;
 }
 
 .site-footer ul li {
@@ -3675,4 +3754,34 @@ a.btn-modal.btn-copy.open + .tooltip {
 @media (max-width: 900px) {
 	.youtube-modal .close-filters {
 	}
+}
+
+/* font overrides */
+
+.font-fam-gotham-bold {
+	font-family: 'Gotham-Bold' !important;
+}
+
+.font-fam-gotham-book {
+	font-family: 'Gotham-Book' !important;
+}
+
+.font-fam-gotham-ultra {
+	font-family: 'Gotham-Ultra' !important;
+}
+
+.font-fam-palatino-italic {
+	font-family: 'Palatino-Italic' !important;
+}
+
+.font-size-28px {
+	font-size: 28px !important;
+}
+
+.font-size-21px {
+	font-size: 21px !important;
+}
+
+.font-size-18px {
+	font-size: 18px !important;
 }

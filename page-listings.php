@@ -343,7 +343,7 @@ if (!empty($terms)) {
 				<form id="map-filters" action="" method="" name="map-filters" class="map-filters">
 					<div class="form-content">
 						<div id="filters" class="form-col filters">
-							<div class="form-header">Filter By</div>
+							<div class="form-header">Filter by</div>
 
 							<input type="hidden" name="availability" value="Yes">
 
@@ -518,7 +518,7 @@ if (!empty($terms)) {
 						<div class="form-sep"></div>
 
 						<div id="sorts" class="form-col sorts">
-							<div class="form-header">Sort By</div>
+							<div class="form-header">Sort by</div>
 							<div class="form-section sort-section">
 
 								<ul class="sort-col">

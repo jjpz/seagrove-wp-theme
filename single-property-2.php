@@ -8,7 +8,7 @@
 			'current_page' => 1,
 			'max_page' => 1
 		);
-		wp_localize_script('listings-js', 'helper', $data);
+		wp_localize_script('maps-js', 'helper', $data);
 		?>
 
 		<?php
@@ -116,7 +116,7 @@
 										$img = wp_get_attachment_image($image, 'thumbnail', false, array('src' => '', 'data-lazy' => $src));
 									}
 									?>
-									<div class="slide property-slide" data-nav-title="<? php ?>">
+									<div class="slide property-slide" data-nav-title="">
 										<div class="slide-image property-slide-image">
 											<?php echo $img; ?>
 										</div>

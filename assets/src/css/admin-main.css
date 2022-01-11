@@ -55,6 +55,11 @@
 	content: '';
 }
 
+.carbon-theme-options .cf-field.cf-text:before {
+	display: none;
+	position: relative;
+}
+
 .cf-field.cf-text .cf-field__head {
 	position: relative;
 	float: left;
