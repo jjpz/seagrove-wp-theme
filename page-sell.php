@@ -54,7 +54,7 @@ while (have_posts()) {
 				<?php
 				$ID = $item->ID;
 				$title = $item->post_title;
-				$content = $item->post_content;
+				$content = apply_filters('the_content', $item->post_content);
 				$src = get_the_post_thumbnail_url($ID, 'full');
 				$srcset = wp_get_attachment_image_srcset(get_post_thumbnail_id($ID), 'full');
 				$image = get_the_post_thumbnail($ID, array(50, 50), array('data-src' => $src, 'data-srcset' => $srcset, 'class' => 'lazy', 'loading' => 'lazy'));
@@ -64,8 +64,8 @@ while (have_posts()) {
 					$class_content = '';
 					$class_right = '';
 				} else {
-					$class_image = 'order-sm-2';
-					$class_content = 'order-sm-1';
+					$class_image = 'order-md-2';
+					$class_content = 'order-md-1';
 					$class_right = 'image-right';
 				}
 				?>
@@ -73,7 +73,7 @@ while (have_posts()) {
 				<section class="marketing-item">
 					<div class="container">
 						<div class="row no-gutters">
-							<div class="col-sm-6 <?php echo $class_image; ?>">
+							<div class="col-md-6 <?php echo $class_image; ?>">
 								<div class="post-thumbnail <?php echo $class_right; ?>">
 									<!--<img width="" height="" src="" class="wp-post-image lazy" alt="" data-src="<?php echo $src; ?>" data-srcset="<?php echo $srcset; ?>" loading="lazy">-->
 									<?php //echo $image; 
@@ -82,7 +82,7 @@ while (have_posts()) {
 									<div class="lazy-overlay on"></div>
 								</div>
 							</div>
-							<div class="col-sm-6 <?php echo $class_content; ?>">
+							<div class="col-md-6 <?php echo $class_content; ?>">
 								<div class="marketing-item-content">
 									<div class="marketing-item-info">
 										<h3 class="h3-new"><?php echo $title; ?></h3>

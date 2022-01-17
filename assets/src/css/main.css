@@ -1796,6 +1796,24 @@ body.page-template-page-join-our-team .site-content {
 	color: #fff;
 }
 
+body.page-template-page-join-our-team .join-our-team-list ul {
+	list-style: none;
+}
+
+body.page-template-page-join-our-team .join-our-team-list ul li::before {
+	content: '';
+	border-color: transparent #fff;
+	border-style: solid;
+	border-width: 0.25em 0 0.25em 0.35em;
+	display: block;
+	height: 0;
+	width: 0;
+	left: -1em;
+	top: 0.9em;
+	position: relative;
+	margin-bottom: -7.5px;
+}
+
 /* buying page */
 
 .buy-items {
@@ -2479,12 +2497,12 @@ a.map-dir-btn {
 }
 
 .marketing-item {
-	margin-bottom: 90px;
+	margin-bottom: 120px;
 }
 
-.marketing-item:last-child {
+/* .marketing-item:last-child {
 	margin-bottom: 105px;
-}
+} */
 
 /* .marketing-item .row {
 	background: #e7e7e9;
@@ -2529,6 +2547,10 @@ a.map-dir-btn {
 	padding: 50px;
 	word-wrap: break-word;
 	color: #002c3f;
+}
+
+.marketing-item-subtitle {
+	line-height: 1.5;
 }
 
 .marketing-grid-header {
