@@ -77,8 +77,12 @@ function setMarkers(locations){
 		map.setZoom(15);
 	}
 	console.log(markers);
+	return markers;
 }
 setMarkers(locations);
+
+// show marker clusters
+const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
 
 // map info window
 function showInfoWindow(location, marker, infowindow){

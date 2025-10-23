@@ -55,10 +55,10 @@ function floatingContact(){
 		
 		if ( width < 576 ) {
 			$('.contact-float-btn').css('width', bar);
-			$('.contact-float').css('right', right);
+			//$('.contact-float').css('right', right);
 		} else {
 			$('.contact-float-btn').css('width', 'auto');
-			$('.contact-float').css('right', '2.5%');
+			//$('.contact-float').css('right', '2.5%');
 		}
 		
 		if ( !$('body').hasClass('home') ) {

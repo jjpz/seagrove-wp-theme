@@ -293,9 +293,22 @@ feed.run();
 
 <script>
 window.onload = function(){
-var loader = document.getElementById('loader');
-loader.style.opacity = 0;
-setTimeout(function(){ loader.style.display = 'none'; }, 500);
+	let loader = document.getElementById('loader');
+	let logo = document.querySelector('.loader-logo');
+	let spinner = document.querySelector('.spinner');
+
+	setTimeout(function () {
+		logo.style.opacity = 0;
+		spinner.style.opacity = 0;
+	}, 250);
+
+	setTimeout(function () {
+		loader.style.opacity = 0;
+	}, 500);
+
+	setTimeout(function () {
+		loader.style.display = 'none';
+	}, 1500);
 };
 </script>
 
