@@ -1,4 +1,5 @@
 <?php
+    extract($args);
     $banner_image = get_field('home_banner_image', $ID);
     $src = wp_get_attachment_image_url($banner_image, 'large');
     $srcset = wp_get_attachment_image_srcset($banner_image, 'large');

@@ -1,5 +1,5 @@
 <?php
-    $ID = get_the_ID();
+    extract($args);
     $intro_title = get_field('home_intro_title', $ID);
     $intro_subtitle = get_field('home_intro_subtitle', $ID);
     $intro_text = get_field('home_intro_text', $ID);

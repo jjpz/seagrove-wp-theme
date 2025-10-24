@@ -1,4 +1,5 @@
 <?php
+    extract($args);
     $about_title = carbon_get_post_meta($ID, 'crb_home_about_title');
     $about_images = carbon_get_post_meta($ID, 'crb_home_about_images');
     $about_items = carbon_get_post_meta($ID, 'crb_home_about_items');

@@ -1,14 +1,21 @@
 <?php get_header(); ?>
 
-<?php $loader_image = carbon_get_theme_option('crb_theme_loader_image'); ?>
-
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 		<?php
+			$ID = get_the_ID();
+			$loader_image = carbon_get_theme_option('crb_theme_loader_image');
+
 			get_template_part('components/home/slider');
-			get_template_part('components/home/intro');
-			get_template_part('components/home/about');
-			get_template_part('components/home/bio');
+			get_template_part('components/home/intro', '', ['ID' => $ID]);
+			get_template_part('components/home/about', '', [
+				'ID' => $ID,
+				'loader_image' => $loader_image
+			]);
+			get_template_part('components/home/bio', '', [
+				'ID' => $ID,
+				'loader_image' => $loader_image
+			]);
 			get_template_part('components/home/instagram');
 		?>
 	</main>
